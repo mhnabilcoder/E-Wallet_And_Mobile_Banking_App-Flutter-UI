@@ -14,9 +14,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: ThemeData(
-        colorScheme: ColorScheme.light(primary: Color(0xffe02469),),
+        appBarTheme: AppBarTheme(
+          backgroundColor: Color(0xffe02469),
+        ),
       ),
-      home: HomeScreen(),
+      home: mainScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

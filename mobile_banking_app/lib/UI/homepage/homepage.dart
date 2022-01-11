@@ -255,11 +255,7 @@ class HomeScreen extends StatelessWidget {
                         Icon(Icons.arrow_drop_up,size: 30,color: Colors.black54,),
                       ],
                     ),
-                    Container(
-                      height: 2,
-                      width: MediaQuery.of(context).size.width,
-                      color: Colors.grey.shade100,
-                    ),
+                    Divider(height: 1,color: Colors.grey,),
                     Row(
                       children: [
                         Padding(
@@ -349,121 +345,121 @@ class HomeScreen extends StatelessWidget {
                         Icon(Icons.arrow_drop_up,size: 30,color: Colors.black54,),
                       ],
                     ),
+                    Divider(height: 1,color: Colors.grey,),
                     Container(
-                      height: 2,
-                      width: MediaQuery.of(context).size.width,
-                      color: Colors.grey.shade100,
-                    ),
-                    Row(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0,bottom: 8.0,left: 18.0),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(6.0),
-                              child: Container(
-                                height: 30,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  color: Colors.amber,
-                                  image: DecorationImage(image: AssetImage("assets/images/btcl.jpeg",),
-                                    fit: BoxFit.fill,
+                      height: 80,
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0,bottom: 8.0,left: 18.0),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(6.0),
+                                child: Container(
+                                  height: 30,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    color: Colors.amber,
+                                    image: DecorationImage(image: AssetImage("assets/images/btcl.jpeg",),
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Text("বিটিসিএল",style: TextStyle(color: Colors.black54),),
-                          ],
+                              Text("বিটিসিএল",),
+                            ],
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0,bottom: 8.0,left: 30.0),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(6.0),
-                              child: Container(
-                                height: 30,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  color: Colors.amber,
-                                  image: DecorationImage(image: AssetImage("assets/images/bdnews24.jpeg",),
-                                    fit: BoxFit.fill,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0,bottom: 8.0,left: 30.0),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(6.0),
+                                child: Container(
+                                  height: 30,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    color: Colors.amber,
+                                    image: DecorationImage(image: AssetImage("assets/images/bdnews24.jpeg",),
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Text("বিটিসিএল",style: TextStyle(color: Colors.black54),),
-                          ],
+                              Text("বিটিসিএল",style: TextStyle(color: Colors.black54),),
+                            ],
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0,bottom: 8.0,left: 30.0),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(6.0),
-                              child: Container(
-                                height: 30,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  color: Colors.amber,
-                                  image: DecorationImage(image: AssetImage("assets/images/ajker_deal.png",),
-                                    fit: BoxFit.fill,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0,bottom: 8.0,left: 30.0),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(6.0),
+                                child: Container(
+                                  height: 30,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    color: Colors.amber,
+                                    image: DecorationImage(image: AssetImage("assets/images/ajker_deal.png",),
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Text("ফ্রি ডেলিভারি ",style: TextStyle(color: Colors.black54),),
-                          ],
+                              Text("ফ্রি ডেলিভারি ",style: TextStyle(color: Colors.black54),),
+                            ],
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0,bottom: 8.0,left: 30.0),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(6.0),
-                              child: Container(
-                                height: 30,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  color: Colors.amber,
-                                  image: DecorationImage(image: AssetImage("assets/images/ajker_deal.png",),
-                                    fit: BoxFit.fill,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0,bottom: 8.0,left: 30.0),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(6.0),
+                                child: Container(
+                                  height: 30,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    color: Colors.amber,
+                                    image: DecorationImage(image: AssetImage("assets/images/ajker_deal.png",),
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Text("ফ্রি ডেলিভারি ",style: TextStyle(color: Colors.black54),),
-                          ],
+                              Text("ফ্রি ডেলিভারি ",style: TextStyle(color: Colors.black54),),
+                            ],
+                          ),
                         ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 8.0,bottom: 8.0,left: 30.0),
-                        child: Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(6.0),
-                              child: Container(
-                                height: 30,
-                                width: 50,
-                                decoration: BoxDecoration(
-                                  color: Colors.amber,
-                                  image: DecorationImage(image: AssetImage("assets/images/ajker_deal.png",),
-                                    fit: BoxFit.fill,
+                        Padding(
+                          padding: const EdgeInsets.only(top: 8.0,bottom: 8.0,left: 30.0),
+                          child: Column(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(6.0),
+                                child: Container(
+                                  height: 30,
+                                  width: 50,
+                                  decoration: BoxDecoration(
+                                    color: Colors.amber,
+                                    image: DecorationImage(image: AssetImage("assets/images/ajker_deal.png",),
+                                      fit: BoxFit.fill,
+                                    ),
                                   ),
                                 ),
                               ),
-                            ),
-                            Text("ফ্রি ডেলিভারি ",style: TextStyle(color: Colors.black54),),
-                          ],
+                              Text("ফ্রি ডেলিভারি ",style: TextStyle(color: Colors.black54),),
+                            ],
+                          ),
                         ),
-                      ),
 
-                    ],
-                      ),
+                      ],
+                        ),
+                    ),
                   ],
                 ),
 
@@ -473,7 +469,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                height: 220,
+                height: 215,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -504,11 +500,265 @@ class HomeScreen extends StatelessWidget {
 
                       ],
                     ),
-                    Container(
-                      height: 2,
-                      width: MediaQuery.of(context).size.width,
-                      color: Colors.grey.shade100,
+                    Divider(height: 1,color: Colors.grey,),
+                    SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0,right: 4.0,top: 6.0),
+                            child: Container(
+                              height: 160,
+                              width: 150,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(3.0),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 1,
+                                          blurRadius: 3,
+                                          offset: Offset(0, 1,), // changes position of shadow
+                                        ),
+                                      ],
+                                    ),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          height: 105,
+                                          width: 150,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(image: AssetImage("assets/images/recharge_dhamaka.png",),
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(6.0),
+                                          child: Text("offer name",style: TextStyle(color:Colors.black87),),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 8.0,bottom: 4.0),
+                                          child: Text("Brand",style: TextStyle(color:Colors.black45),),
+                                        ),
+
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8.0,top: 6.0),
+                            child: Container(
+                              height: 160,
+                              width: 150,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(3.0),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 1,
+                                          blurRadius: 3,
+                                          offset: Offset(0, 1,), // changes position of shadow
+                                        ),
+                                      ],
+                                    ),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          height: 105,
+                                          width: 150,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(image: AssetImage("assets/images/hungry_naki.png",),
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(6.0),
+                                          child: Text("offer name",style: TextStyle(color:Colors.black87),),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 8.0,bottom: 4.0),
+                                          child: Text("Brand",style: TextStyle(color:Colors.black45),),
+                                        ),
+
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8.0,top: 6.0),
+                            child: Container(
+                              height: 160,
+                              width: 150,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(3.0),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 1,
+                                          blurRadius: 3,
+                                          offset: Offset(0, 1,), // changes position of shadow
+                                        ),
+                                      ],
+                                    ),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          height: 105,
+                                          width: 150,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(image: AssetImage("assets/images/bdnews24.jpeg",),
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(6.0),
+                                          child: Text("offer name",style: TextStyle(color:Colors.black87),),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 8.0,bottom: 4.0),
+                                          child: Text("Brand",style: TextStyle(color:Colors.black45),),
+                                        ),
+
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8.0,top: 6.0),
+                            child: Container(
+                              height: 160,
+                              width: 150,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(3.0),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 1,
+                                          blurRadius: 3,
+                                          offset: Offset(0, 1,), // changes position of shadow
+                                        ),
+                                      ],
+                                    ),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          height: 105,
+                                          width: 150,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(image: AssetImage("assets/images/btcl.jpeg",),
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(6.0),
+                                          child: Text("offer name",style: TextStyle(color:Colors.black87),),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 8.0,bottom: 4.0),
+                                          child: Text("Brand",style: TextStyle(color:Colors.black45),),
+                                        ),
+
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(right: 8.0,top: 6.0),
+                            child: Container(
+                              height: 160,
+                              width: 150,
+                              child: Column(
+                                children: [
+                                  Container(
+                                    decoration: BoxDecoration(
+                                      color: Colors.white,
+                                      borderRadius: BorderRadius.circular(3.0),
+                                      boxShadow: [
+                                        BoxShadow(
+                                          color: Colors.grey.withOpacity(0.5),
+                                          spreadRadius: 1,
+                                          blurRadius: 3,
+                                          offset: Offset(0, 1,), // changes position of shadow
+                                        ),
+                                      ],
+                                    ),
+                                    child: Column(
+                                      crossAxisAlignment: CrossAxisAlignment.start,
+                                      children: [
+                                        Container(
+                                          height: 105,
+                                          width: 150,
+                                          decoration: BoxDecoration(
+                                            image: DecorationImage(image: AssetImage("assets/images/ajker_deal.png",),
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.all(6.0),
+                                          child: Text("offer name",style: TextStyle(color:Colors.black87),),
+                                        ),
+                                        Padding(
+                                          padding: const EdgeInsets.only(left: 8.0,bottom: 4.0),
+                                          child: Text("Brand",style: TextStyle(color:Colors.black45),),
+                                        ),
+
+                                      ],
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
+
+
+
+                        ],
+                      ),
                     ),
+
                   ],
                 ),
 
