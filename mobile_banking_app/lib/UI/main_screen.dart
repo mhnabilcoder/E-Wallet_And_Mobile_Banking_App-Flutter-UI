@@ -28,15 +28,28 @@ class _mainScreenState extends State<mainScreen> {
     return Scaffold(
       body: _widgetOptions[_selectedIndex],
       bottomNavigationBar: BottomNavigationBar(
+        selectedLabelStyle: TextStyle(
+          color: Colors.white,
+        ),
+        selectedIconTheme: IconThemeData(
+          color: Colors.white,
+          size: 28.0,
+        ),
+        unselectedIconTheme: IconThemeData(
+          color: Colors.white60,
+          size: 24.0,
+        ),
+        backgroundColor: Color(0xffe02469),
         items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(icon: Icon(Icons.home_outlined,color: Colors.black87,),label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.chat_bubble_outline,color: Colors.black87,),label: "Message"),
-          BottomNavigationBarItem(icon: Icon(Icons.email_outlined,color: Colors.black87,),label: "Account"),
+          BottomNavigationBarItem( icon: Icon(Icons.home_outlined,),label: "হোম",),
+          BottomNavigationBarItem(icon: Icon(Icons.qr_code,),label: "QR স্ক্যান",),
+          BottomNavigationBarItem(icon: Icon(Icons.email_outlined,),label: "ইনবক্স",),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: Colors.white,
         onTap: _onItemTapped,
       ),
+
     );
   }
 }

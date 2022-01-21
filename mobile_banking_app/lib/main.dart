@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import 'UI/homepage/homepage.dart';
 import 'UI/main_screen.dart';
 
@@ -23,4 +22,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-

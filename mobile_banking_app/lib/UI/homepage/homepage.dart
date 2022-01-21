@@ -1,30 +1,129 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
-class HomeScreen extends StatelessWidget {
+
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: _scaffoldKey,
+      appBar: AppBar(),
+      endDrawer: Drawer(
+        // column holds all the widgets in the drawer
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: ListView(
+                children:[
+                  DrawerHeader(child: FlutterLogo()),
+                  ListTile(
+                    leading: Icon(Icons.call),
+                    title: const Text('Call Support'),
+                    onTap: () {
+
+                    },
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.wallet_giftcard),
+                    title: const Text('Offers'),
+                    onTap: () {
+
+                    },
+                  ),
+
+                  ListTile(
+                    leading: Icon(Icons.description_rounded),
+                    title: const Text('Terms & Conditions'),
+                    onTap: () {
+                    },
+                  ),
+                ],
+              ),
+            ),
+            // This container holds the align
+            Container(
+              // This align moves the children to the bottom
+                child: Align(
+                    alignment: FractionalOffset.bottomCenter,
+                    child: Container(
+                      child: Column(
+                        children: <Widget>[
+                          Divider(),
+                          ListTile(
+                              leading: Icon(Icons.help),
+                              title: Text('About Us',style: TextStyle(fontSize: 18),)),
+                        ],
+                      ),
+                    )
+                )
+            )
+          ],
+        ),
+      ),
       backgroundColor: Colors.grey.shade100,
       body: SingleChildScrollView(
         child: Column(
           children: [
             ///Menu Bar
-            SafeArea(child : Container(
-              height: 80,
-              width: MediaQuery.of(context).size.width,
-              color: Color(0xffe02469),
-              child: Row(
-                children: [
+              SafeArea(
+                child: Container(
+                  height: 80,
+                  width: double.infinity,
+                  color: Color(0xffe02469),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        flex: 2,
+                        child: Center(
+                          child: Container(
+                            height: 80,
+                            color: Colors.orange,
+                            child: Row(
+                              children: [
 
-                ],
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 16.0,top: 16,bottom: 2),
+                                  child: Icon(Icons.account_box,size: 54,color: Colors.white,),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(top: 22.0,left: 12.0),
+                                  child: Column(
+                                    children: [
+                                      Text("Account Name",style: TextStyle(color: Colors.white60,fontSize: 16),),
+                                      Text("balance"),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                      Expanded(child: Container(child: InkWell(
+                          onTap: () {
+                             _scaffoldKey.currentState!.openEndDrawer();
+
+                             print('ekhane');
+                          },
+                          child:  Icon(Icons.email)))),
+
+
+                    ],
+                  ),
+                ),
               ),
-            )),
             ///Main Options
             Container(
-              height: 210,
+              height: 216,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
                 color: Colors.white,
@@ -243,7 +342,7 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
                 child: Column(
-                  
+
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -318,7 +417,7 @@ class HomeScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                height: 112,
+                height: 114,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   color: Colors.white,
@@ -765,9 +864,12 @@ class HomeScreen extends StatelessWidget {
 
               ),
             ),
+
+
           ],
         ),
       ),
+
     );
   }
 }
