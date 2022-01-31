@@ -15,7 +15,7 @@ class InboxScreen extends StatelessWidget {
             actions: [
               Padding(
                 padding: const EdgeInsets.all(8.0),
-                child: FlutterLogo(),
+                child: Image(image: AssetImage('assets/images/icons/fly.png')),
               ),
             ],
           bottom: TabBar(
@@ -66,47 +66,71 @@ class TransactionsPage extends StatelessWidget {
     return ListView(
       children: [
         Padding(
-          padding: const EdgeInsets.only(top: 4.0,bottom: 4.0),
+          padding: const EdgeInsets.only(top: 2.0,bottom: 2.0),
           child: ListTile(
-            tileColor: Colors.greenAccent,
+            tileColor: Colors.grey.shade100,
             leading: CircleAvatar(
 
-              backgroundColor: Colors.grey.shade100,
+              backgroundColor: Colors.grey.shade300,
+              child: Icon(Icons.person,color: Colors.white,size: 44,),
               radius: 30.0,
             ),
-            title: Text("Name"),
-            subtitle: Text("0xxxx  \nTrans ID:"),
+            title: Text("ক্যাশ ইন ",style: TextStyle(fontWeight: FontWeight.w800,color: Colors.black87),),
+            subtitle: Text("015098765432   \nTrans ID: 8LJ6v298",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.grey),),
              isThreeLine: true,
-            trailing: Text("20/12/2021"),
+            trailing: Text("30/1/2021"),
 
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 4.0,bottom: 4.0),
+          padding: const EdgeInsets.only(top: 2.0,bottom: 2.0),
           child: ListTile(
-            tileColor: Colors.greenAccent,
-            title: Text("Name"),
-            leading: FlutterLogo(),
-            subtitle: Text("Trans ID: xxxx"),
-          ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(top: 4.0,bottom: 4.0),
-          child: ListTile(
+            tileColor: Colors.grey.shade100,
+            leading: CircleAvatar(
+
+              backgroundColor: Colors.grey.shade300,
+              child: Icon(Icons.person,color: Colors.white,size: 44,),
+              radius: 30.0,
+            ),
+            title: Text("ক্যাশ আউট ",style: TextStyle(fontWeight: FontWeight.w800,color: Colors.black87),),
+            subtitle: Text("0138765432658   \nTrans ID: 90Ck8v298",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.grey),),
             isThreeLine: true,
-            tileColor: Colors.greenAccent,
-            title: Text("Name"),
-            leading: FlutterLogo(),
-            subtitle: Text("Trans ID: xxxx"),
+            trailing: Text("26/1/2021"),
+
           ),
         ),
         Padding(
-          padding: const EdgeInsets.only(top: 4.0,bottom: 4.0),
+          padding: const EdgeInsets.only(top: 2.0,bottom: 2.0),
           child: ListTile(
-            tileColor: Colors.greenAccent,
-            title: Text("Name"),
-            leading: FlutterLogo(),
-            subtitle: Text("Trans ID: xxxx"),
+            tileColor: Colors.grey.shade100,
+            leading: CircleAvatar(
+
+              backgroundColor: Colors.grey.shade300,
+              child: Icon(Icons.person,color: Colors.white,size: 44,),
+              radius: 30.0,
+            ),
+            title: Text("মোবাইল রিচার্জ ",style: TextStyle(fontWeight: FontWeight.w800,color: Colors.black87),),
+            subtitle: Text("012298765432   \nTrans ID: 296JK6v9D",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.grey),),
+            isThreeLine: true,
+            trailing: Text("20/1/2021"),
+
+          ),
+        ),
+        Padding(
+          padding: const EdgeInsets.only(top: 2.0,bottom: 2.0),
+          child: ListTile(
+            tileColor: Colors.grey.shade100,
+            leading: CircleAvatar(
+
+              backgroundColor: Colors.grey.shade300,
+              child: Icon(Icons.person,color: Colors.white,size: 44,),
+              radius: 30.0,
+            ),
+            title: Text("সেন্ড মানি  ",style: TextStyle(fontWeight: FontWeight.w800,color: Colors.black87),),
+            subtitle: Text("Shakib  \nTrans ID: Zh786v298",style: TextStyle(fontWeight: FontWeight.bold,color: Colors.grey),),
+            isThreeLine: true,
+            trailing: Text("16/1/2021"),
+
           ),
         ),
       ],
@@ -141,9 +165,14 @@ class NotificationCard extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(4.0),
                   child: Container(
-                    height: 90,
+                    height: 60,
                     width: 60,
-                    color: Colors.redAccent,
+
+                    decoration: BoxDecoration(
+                      image: DecorationImage(image: AssetImage("assets/images/icons/bkash_icon.png",),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
                   ),
                 ),
                 Padding(
@@ -159,7 +188,7 @@ class NotificationCard extends StatelessWidget {
                           children: [
                             Padding(
                               padding: const EdgeInsets.all(4.0),
-                              child: Text('Offer Name',style: TextStyle(fontSize: 16),),
+                              child: Text('বিল বিকাশ করুন চার্জ ছাড়াই ',style: TextStyle(fontSize: 16),),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(4.0),
@@ -174,7 +203,7 @@ class NotificationCard extends StatelessWidget {
                                 padding: const EdgeInsets.all(5.0),
                                 child: Container(
                                   height: 50,
-                                    child: Text("datadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadatadata")),
+                                    child: Text("এখন থেকে বিকাশ এ পে বিল সম্পূর্ণ ফ্রি এবং পে বিল করলেই পাবেন বিকাশ পয়েন্টস ")),
                               ),
                             ),
                           ],

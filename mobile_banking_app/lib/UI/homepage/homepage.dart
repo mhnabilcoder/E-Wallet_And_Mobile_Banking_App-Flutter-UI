@@ -16,113 +16,70 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: _scaffoldKey,
-      appBar: AppBar(),
-      endDrawer: Drawer(
-        // column holds all the widgets in the drawer
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: ListView(
-                children:[
-                  DrawerHeader(child: FlutterLogo()),
-                  ListTile(
-                    leading: Icon(Icons.call),
-                    title: const Text('Call Support'),
-                    onTap: () {
-
-                    },
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.wallet_giftcard),
-                    title: const Text('Offers'),
-                    onTap: () {
-
-                    },
-                  ),
-
-                  ListTile(
-                    leading: Icon(Icons.description_rounded),
-                    title: const Text('Terms & Conditions'),
-                    onTap: () {
-                    },
-                  ),
-                ],
-              ),
-            ),
-            // This container holds the align
-            Container(
-              // This align moves the children to the bottom
-                child: Align(
-                    alignment: FractionalOffset.bottomCenter,
-                    child: Container(
-                      child: Column(
-                        children: <Widget>[
-                          Divider(),
-                          ListTile(
-                              leading: Icon(Icons.help),
-                              title: Text('About Us',style: TextStyle(fontSize: 18),)),
-                        ],
-                      ),
-                    )
-                )
-            )
-          ],
-        ),
+      appBar: PreferredSize(
+        child: AppBarWidget(),
+        preferredSize: Size.fromHeight(82.0),
       ),
+      // endDrawer: Drawer(
+      //   // column holds all the widgets in the drawer
+      //   child: Column(
+      //     children: <Widget>[
+      //       Expanded(
+      //         child: ListView(
+      //           children:[
+      //             DrawerHeader(child: FlutterLogo()),
+      //             ListTile(
+      //               leading: Icon(Icons.call),
+      //               title: const Text('Call Support'),
+      //               onTap: () {
+      //
+      //               },
+      //             ),
+      //             ListTile(
+      //               leading: Icon(Icons.wallet_giftcard),
+      //               title: const Text('Offers'),
+      //               onTap: () {
+      //
+      //               },
+      //             ),
+      //
+      //             ListTile(
+      //               leading: Icon(Icons.description_rounded),
+      //               title: const Text('Terms & Conditions'),
+      //               onTap: () {
+      //               },
+      //             ),
+      //           ],
+      //         ),
+      //       ),
+      //       // This container holds the align
+      //       Container(
+      //         // This align moves the children to the bottom
+      //           child: Align(
+      //               alignment: FractionalOffset.bottomCenter,
+      //               child: Container(
+      //                 child: Column(
+      //                   children: <Widget>[
+      //                     Divider(),
+      //                     ListTile(
+      //                         leading: Icon(Icons.help),
+      //                         title: Text('About Us',style: TextStyle(fontSize: 18),)),
+      //                   ],
+      //                 ),
+      //               )
+      //           )
+      //       )
+      //     ],
+      //   ),
+      // ),
+
       backgroundColor: Colors.grey.shade100,
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ///Menu Bar
-              SafeArea(
-                child: Container(
-                  height: 80,
-                  width: double.infinity,
-                  color: Color(0xffe02469),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        flex: 2,
-                        child: Center(
-                          child: Container(
-                            height: 80,
-                            color: Colors.orange,
-                            child: Row(
-                              children: [
-
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 16.0,top: 16,bottom: 2),
-                                  child: Icon(Icons.account_box,size: 54,color: Colors.white,),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(top: 22.0,left: 12.0),
-                                  child: Column(
-                                    children: [
-                                      Text("Account Name",style: TextStyle(color: Colors.white60,fontSize: 16),),
-                                      Text("balance"),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ),
-                      Expanded(child: Container(child: InkWell(
-                          onTap: () {
-                             _scaffoldKey.currentState!.openEndDrawer();
-
-                             print('ekhane');
-                          },
-                          child:  Icon(Icons.email)))),
-
-
-                    ],
-                  ),
-                ),
-              ),
             ///Main Options
             Container(
+              padding: EdgeInsets.symmetric(vertical: 8,horizontal: 8),
               height: 216,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
@@ -138,185 +95,134 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               child: Column(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0,right: 8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Container(
-                                  height: 40,
-                                  width: 60,
-                                  decoration: BoxDecoration(
-                                    color: Colors.amber,
-                                    image: DecorationImage(image: AssetImage("assets/images/icons/send_money.png"),
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Text("সেন্ড মানি"),
-                            ],
-                          ),
-                        ),
-                        Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: Container(
-                                height: 45,
-                                width: 30,
-                                decoration: BoxDecoration(
-                                  color: Colors.amber,
-                                  image: DecorationImage(image: AssetImage("assets/images/icons/mobile_recharge.png"),
-                                  fit: BoxFit.fill,
-                                  ),
-                                ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            height: 60,
+                            width: MediaQuery.of(context).size.width / 4 - 6,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(image: AssetImage("assets/images/icons/send_money.png"),
+                                fit: BoxFit.cover,
                               ),
                             ),
-                            Text("মোবাইল রিচার্জ"),
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 4.0),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Container(
-                                  height: 40,
-                                  width: 60,
-                                  decoration: BoxDecoration(
-                                    color: Colors.amber,
-                                    image: DecorationImage(image: AssetImage("assets/images/icons/cash_out.png"),
-                                      fit: BoxFit.fill,
-                                    ),
+                          ),
+                          Text("সেন্ড মানি"),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            height: 60,
+                            width: MediaQuery.of(context).size.width / 4 - 6,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(image: AssetImage("assets/images/icons/mobile_recharge.png"),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Text("মোবাইল রিচার্জ"),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            height: 60,
+                            width: MediaQuery.of(context).size.width / 4 - 6,
+                            decoration: BoxDecoration(
 
-                                  ),
-                                ),
+                              image: DecorationImage(image: AssetImage("assets/images/icons/cash_out.png"),
+                                fit: BoxFit.cover,
                               ),
-                              Text("ক্যাশ আউট"),
-                            ],
+
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Container(
-                                  height: 40,
-                                  width: 30,
-                                  decoration: BoxDecoration(
-                                    color: Colors.amber,
-                                    image: DecorationImage(image: AssetImage("assets/images/icons/payment.png"),
-                                    ),
-                                    shape: BoxShape.rectangle,
-                                  ),
-                                ),
+                          Text("ক্যাশ আউট"),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            height: 60,
+                            width: MediaQuery.of(context).size.width / 4 - 6,
+                            decoration: BoxDecoration(
+
+                              image: DecorationImage(image: AssetImage("assets/images/icons/payment.png"),
+                                fit: BoxFit.cover,
                               ),
-                              Text("পেমেন্ট"),
-                            ],
+                              shape: BoxShape.rectangle,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
+                          Text("পেমেন্ট"),
+                        ],
+                      ),
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Container(
-                                  height: 40,
-                                  width: 60,
-                                  decoration: BoxDecoration(
-                                    color: Colors.amber,
-                                    image: DecorationImage(image: AssetImage("assets/images/icons/add_money.png"),
-                                      fit: BoxFit.fill,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              Text("অ্যাড মানি"),
-                            ],
-                          ),
-                        ),
-                        Column(
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.all(4.0),
-                              child: Container(
-                                height: 45,
-                                width: 32,
-                                decoration: BoxDecoration(
-                                  color: Colors.amber,
-                                  image: DecorationImage(image: AssetImage("assets/images/icons/pay_bill.png"),
-                                  fit: BoxFit.fill,
-                                  ),
-                                ),
+                  SizedBox(height: 30,),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        children: [
+                          Container(
+                            height: 60,
+                            width: MediaQuery.of(context).size.width / 4 - 6,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(image: AssetImage("assets/images/icons/add_money.png"),
+                                fit: BoxFit.cover,
                               ),
                             ),
-                            Text("পে বিল"),
-                          ],
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 8.0),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Container(
-                                  height: 45,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    color: Colors.amber,
-                                    image: DecorationImage(image: AssetImage("assets/images/icons/savings.png"),
-                                      fit: BoxFit.fill,
-                                    ),
+                          ),
+                          Text("অ্যাড মানি"),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            height: 60,
+                            width: MediaQuery.of(context).size.width / 4 - 6,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(image: AssetImage("assets/images/icons/pay_bill.png"),
+                                fit: BoxFit.cover,
+                              ),
+                            ),
+                          ),
+                          Text("পে বিল"),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            height: 60,
+                            width: MediaQuery.of(context).size.width / 4 - 6,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(image: AssetImage("assets/images/icons/tickets.jpg"),
+                                fit: BoxFit.cover,
+                              ),
 
-                                  ),
-                                ),
-                              ),
-                              Text("সেভিংস"),
-                            ],
+                            ),
                           ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(15.0),
-                          child: Column(
-                            children: [
-                              Padding(
-                                padding: const EdgeInsets.all(4.0),
-                                child: Container(
-                                  height: 40,
-                                  width: 40,
-                                  decoration: BoxDecoration(
-                                    color: Colors.amber,
-                                    image: DecorationImage(image: AssetImage("assets/images/icons/more.png"),
-                                    ),
-                                    shape: BoxShape.rectangle,
-                                  ),
-                                ),
+                          Text("টিকেট"),
+                        ],
+                      ),
+                      Column(
+                        children: [
+                          Container(
+                            height: 60,
+                            width: MediaQuery.of(context).size.width / 4 - 6,
+                            decoration: BoxDecoration(
+                              image: DecorationImage(image: AssetImage("assets/images/icons/more.png"),
+                                fit: BoxFit.cover,
                               ),
-                              Text("আরো"),
-                            ],
+                              shape: BoxShape.rectangle,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
+                          Text("আরো"),
+                        ],
+                      ),
+                    ],
                   ),
 
                 ],
@@ -407,11 +313,17 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             ///Slider
-            Container(
-              height: 130,
-              width: MediaQuery.of(context).size.width,
-              color: Colors.grey,
-
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                height: 130,
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage("assets/images/banner.jpg",),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+              ),
             ),
             ///Suggestion
             Padding(
@@ -460,9 +372,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   height: 30,
                                   width: 50,
                                   decoration: BoxDecoration(
-                                    color: Colors.amber,
                                     image: DecorationImage(image: AssetImage("assets/images/btcl.jpeg",),
-                                      fit: BoxFit.fill,
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
                                 ),
@@ -481,7 +392,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                   height: 30,
                                   width: 50,
                                   decoration: BoxDecoration(
-                                    color: Colors.amber,
                                     image: DecorationImage(image: AssetImage("assets/images/bdnews24.jpeg",),
                                       fit: BoxFit.fill,
                                     ),
@@ -502,9 +412,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   height: 30,
                                   width: 50,
                                   decoration: BoxDecoration(
-                                    color: Colors.amber,
                                     image: DecorationImage(image: AssetImage("assets/images/ajker_deal.png",),
-                                      fit: BoxFit.fill,
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
                                 ),
@@ -523,9 +432,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   height: 30,
                                   width: 50,
                                   decoration: BoxDecoration(
-                                    color: Colors.amber,
                                     image: DecorationImage(image: AssetImage("assets/images/ajker_deal.png",),
-                                      fit: BoxFit.fill,
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
                                 ),
@@ -544,9 +452,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                   height: 30,
                                   width: 50,
                                   decoration: BoxDecoration(
-                                    color: Colors.amber,
                                     image: DecorationImage(image: AssetImage("assets/images/ajker_deal.png",),
-                                      fit: BoxFit.fill,
+                                      fit: BoxFit.cover,
                                     ),
                                   ),
                                 ),
@@ -873,3 +780,84 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+
+class AppBarWidget extends StatelessWidget {
+  const AppBarWidget({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return AppBar(
+        flexibleSpace: SafeArea(
+
+        child: Row(
+          children: [
+
+           Padding(
+             padding: const EdgeInsets.only(top: 12.0,left: 24.0),
+             child: CircleAvatar(
+              backgroundColor: Colors.white,
+               child: Icon(Icons.person,size: 42,color: Colors.pink,),
+               radius: 24,
+        ),
+           ),
+            Padding(
+              padding: const EdgeInsets.only(top: 16.0,left: 14.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 6.0),
+                    child: Text("Account Name",style: TextStyle(color: Colors.white,fontSize: 20,fontWeight: FontWeight.w400),),
+                  ),
+                  SizedBox(height: 6,),
+                  Container(
+                    width: 200,
+                    height: 30,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                    ),
+                    child: Row(
+                      children: [
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 4.0),
+                          child: Container(
+                            width: 25,
+                            height: 25,
+                            padding: EdgeInsets.all(2.0),
+                            child: CircleAvatar(
+                              backgroundColor: Colors.pink,
+                              backgroundImage: AssetImage('assets/images/icons/currency.png'),
+                            ),
+                          ),
+                        ),
+                        Text('ব্যালেন্স দেখুন ',
+                            style: TextStyle(
+                                color: Colors.pink.shade500,
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.w600)),
+
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+
+
+          ],
+        ),
+
+        ),
+        actions: [
+    Padding(
+    padding: const EdgeInsets.only(top: 12.0, right: 12.0),
+    child: Container(
+    width: 50, height: 50, child: Image.asset('assets/images/icons/fly.png')),
+    )
+    ]
+    );
+  }
+}
+
+

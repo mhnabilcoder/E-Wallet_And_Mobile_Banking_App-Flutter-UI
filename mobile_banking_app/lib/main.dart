@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      title: "Bkash UI",
       theme: ThemeData(
         appBarTheme: AppBarTheme(
           backgroundColor: Color(0xffe02469),
